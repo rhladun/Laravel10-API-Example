@@ -23,10 +23,7 @@ use App\Http\Controllers\Api\Auth\RegisterController;
 // require __DIR__.'/api/v1.php';
 require __DIR__.'/api/v2.php';
 
-
-
 Route::prefix('auth')->group(function (){
-
     Route::post('/login', LoginController::class)->middleware('guest');
     Route::post('/logout', LogoutController::class)->middleware('auth:sanctum');
     Route::post('/register', RegisterController::class)->middleware('guest');
