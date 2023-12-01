@@ -15,11 +15,11 @@ use App\Http\Controllers\Auth\RegisterController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
-
+*/
 
 Route::prefix('auth')->group(function (){
     Route::post('/login', LoginController::class)->middleware('guest');
